@@ -1,0 +1,8 @@
+app:
+  namespace: argocd
+  tlsSecret: argocd-tls
+  fqdn: argocd.sampledomain.com
+
+service: 
+  name: argocd-server
+  containerPort: 8080
