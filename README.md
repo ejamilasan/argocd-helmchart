@@ -26,20 +26,20 @@
     apiVersion: cert-manager.io/v1
     kind: Certificate
     metadata:
-    name: sample-ca
-    namespace: cert-manager
+        name: sample-ca
+        namespace: cert-manager
     spec:
-    isCA: true
-    duration: 43800h
-    commonName: sampledomain.com
-    secretName: sample-key-pair
-    privateKey:
-        algorithm: ECDSA
-        size: 256
-    issuerRef:
-        name: selfsigned
-        kind: ClusterIssuer
-        group: cert-manager.io
+        isCA: true
+        duration: 43800h
+        commonName: sampledomain.com
+        secretName: sample-key-pair
+        privateKey:
+            algorithm: ECDSA
+            size: 256
+        issuerRef:
+            name: selfsigned
+            kind: ClusterIssuer
+            group: cert-manager.io
     EOF
     ```
     * create selfsigned cluster issuer
@@ -48,10 +48,10 @@
     apiVersion: cert-manager.io/v1
     kind: ClusterIssuer
     metadata:
-    name: selfsigned
+        name: selfsigned
     spec:
-    ca:
-        secretName: sample-key-pair
+        ca:
+            secretName: sample-key-pair
     EOF
     ```
 
