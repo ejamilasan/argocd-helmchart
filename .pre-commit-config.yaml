@@ -1,0 +1,28 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-json
+      - id: trailing-whitespace
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: [--baseline, .secrets.baseline]
+        additional_dependencies: ['gibberish-detector']
+  - repo: https://github.com/aufdenpunkt/pre-commit-js-beautify
+    rev: 1.13.0
+    hooks:
+      - id: js-beautify
+        args: [-r]
+        additional_dependencies: ['js-beautify@1.14.7']
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+        args: ['--ignore=E501,W503,E203']
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.22
+    hooks:
+      - id: helmlint
