@@ -3,6 +3,6 @@ app:
   tlsSecret: argocd-tls
   fqdn: argocd.sampledomain.com
 
-service: 
+service:
   name: argocd-server
   containerPort: 8080

@@ -1,5 +1,7 @@
 # argocd-helmchart
 
+![pre-commit](https://github.com/ejamilasan/argocd-helmchart/actions/workflows/pre-commit.yml/badge.svg)
+
 ## pre-reqs
 
 1. Deploy `nginx ingress`
